@@ -2,15 +2,11 @@
 
 [![Build Status](https://travis-ci.com/Amritaryal44/Video-Steganography.svg?branch=master)](https://travis-ci.com/Amritaryal44/Video-Steganography)
 
-Hide Your secret videos inside any other videos.
+Draw any figure using maths with the use of DFT(fouries series in exponential form) and epicycle
 ### Example
-| Cover video where secret video is to be hidden | Secret Video to be hidden |
+| real figure | generated figure |
 |:--:|:--:| 
-| ![Cover Video](img_md/v1.gif) | ![Secret Video](img_md/v2.gif) |
-
-| cover video with hidden secret video | Revealed secret video |
-|:--:|:--:|
-| ![Encrypted Video](img_md/encrypted.gif) | ![Decrypted Video](img_md/revealed.gif) |
+| ![Real Figure](nepal.png) | ![Generated figure](img_md/example.gif) |
 
 ### Features
 
