@@ -4,9 +4,13 @@
 
 Draw any figure using maths with the use of DFT(fouries series in exponential form) and epicycle
 ### Example
-| real figure | generated figure |
-|:--:|:--:| 
-| <img src="nepal.png" width="50%" height="50%"> | ![Generated figure](img_md/example.gif) |
+| real figure |
+|:--:|
+| <img src="nepal.png" width="50%" height="50%"> | 
+
+| generated figure |
+|:--:|
+| ![Generated figure](img_md/example.gif) |
 
 ### Features
 
