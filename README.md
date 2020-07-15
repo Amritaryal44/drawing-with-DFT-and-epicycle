@@ -15,6 +15,11 @@ Draw any figure using maths with the use of DFT(fouries series in exponential fo
 
 ### Installation
 
+```sh
+$ sudo apt-get update
+$ sudo apt-get install ffmpeg
+```
+
 Clone the repository
 ```sh
 $ git clone https://github.com/Amritaryal44/Video-Steganography.git
