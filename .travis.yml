@@ -3,7 +3,8 @@ python:
   - "3.6"
 cache: pip
 before_script:
-  - cat requirements.txt
+  - sudo apt-get update
+  - sudo apt-get install ffmpeg
   - pip install -r requirements.txt
 script:
   - python DFT_epicycle.py
