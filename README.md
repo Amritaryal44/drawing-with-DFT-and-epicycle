@@ -6,7 +6,7 @@ Draw any figure using maths with the use of DFT(fouries series in exponential fo
 ### Example
 | real figure | generated figure |
 |:--:|:--:| 
-| <img src="nepal.png" width="720" height="400"> | ![Generated figure](img_md/example.gif) |
+| <img src="nepal.png" width="720" height="390"> | ![Generated figure](img_md/example.gif) |
 
 ### Features
 
