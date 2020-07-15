@@ -1,6 +1,6 @@
 # Video Steganography
 
-[![Build Status](https://travis-ci.com/Amritaryal44/Video-Steganography.svg?branch=master)](https://travis-ci.com/Amritaryal44/Video-Steganography)
+[![Build Status](https://travis-ci.com/Amritaryal44/drawing-with-DFT-and-epicycle.svg?token=pZnXxmooEKHShwNV59AQ&branch=master)](https://travis-ci.com/Amritaryal44/drawing-with-DFT-and-epicycle)
 
 Draw any figure using maths with the use of DFT(fouries series in exponential form) and epicycle
 ### Example
