@@ -255,7 +255,7 @@ Output:
 Look at the output, we have sorted them in order like: ![c_{0}, c_{1}, c_{-1}](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B0%7D%2C%20c_%7B1%7D%2C%20c_%7B-1%7D)
 
 #### 2. How to make circles and lines in matplotlib
-**Making a circle**
+**Making a circle**<br>
 Formula for ploting the circle is :
 ![x = rcos(\theta)$$, $$y = rsin(\theta)](https://latex.codecogs.com/svg.latex?%5Cinline%20x%20%3D%20rcos%28%5Ctheta%29%24%24%2C%20%24%24y%20%3D%20rsin%28%5Ctheta%29)
 ```python
@@ -271,8 +271,8 @@ plt.show()
 Output:
 ![circle](img_md/circle.png)
 
-**Making a radius in circle show direction of rotation**
-Let us copy the circle code and make a line here.
+**Making a radius in circle show direction of rotation**<br>
+Let us copy the circle code and make a line here.<br>
 We will draw the line from center of circle and align at ![45^0](https://latex.codecogs.com/svg.latex?%5Cinline%2045%5E0) = tau/8
 ```python
 fig, ax = plt.subplots()
