@@ -116,7 +116,7 @@ xlim_data = plt.xlim()
 ylim_data = plt.ylim()
 ```
 
-#### 6. Make a time_list from $0$ to $2\pi$
+#### 6. Make a time_list from \[0\] to \[2\pi\]
 We are doing this, because we are rotating the circle. To rotate a circle, we need angle. Later we will use this angle to determine $$x+iy = f(t)$$. Later you will use it for calculating fourier coefficients.
 ```python
 t_list = np.linspace(0, tau, len(x_list))
