@@ -141,7 +141,7 @@ Fourier Coefficient Formula is:
 Please watch [this video][explained] for better understanding.
 Coefficients will be in sequence like: ...![$$c_{-2}, c_{-1}, c_{0}, c_{1}, c_{2}$$](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B-2%7D%2C%20c_%7B-1%7D%2C%20c_%7B0%7D%2C%20c_%7B1%7D%2C%20c_%7B2%7D)...
 More and more coefficients means better result.
-So we will define ```order=100``` for now. which goes from $$c_{-order}$$ to ![$$c_{order}$$](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7Border%7D)
+So we will define ```order=100``` for now. which goes from ![$$c_{-order}$$](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B-order%7D) to ![$$c_{order}$$](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7Border%7D)
 ```python
 order = 100
 ```
