@@ -84,6 +84,9 @@ circle_lines = [ax.plot([], [], 'b-')[0] for i in range(-order, order+1)]
 # drawing is plot of final drawing
 drawing, = ax.plot([], [], 'k-', linewidth=2)
 
+# original drawing
+orig_drawing, = ax.plot([], [], 'g-', linewidth=0.5)
+
 # to fix the size of figure so that the figure does not get cropped/trimmed
 ax.set_xlim(xlim_data[0]-200, xlim_data[1]+200)
 ax.set_ylim(ylim_data[0]-200, ylim_data[1]+200)
@@ -159,6 +162,9 @@ def make_frame(i, time, coeffs):
 
     # draw the curve from last point
     drawing.set_data(draw_x, draw_y)
+
+    # draw the real curve
+    orig_drawing.set_data(x_list, y_list)
 
     # update progress bar
     pbar.update(1)
