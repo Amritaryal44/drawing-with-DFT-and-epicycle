@@ -132,6 +132,7 @@ It will go from 0 to ```tau```. Tau is just ![2\pi^c= 360^0](https://latex.codec
 #### 7. Find the fourier coefficients to approximately locate given points
 Fourier Coefficient Formula is:
 > ![c_n=\frac{1}{2\pi}\int_0^{2\pi} f(t)\mathrm{e}^{-jnt}\mathrm{d}x](https://latex.codecogs.com/svg.latex?%5Cinline%20c_n%3D%5Cfrac%7B1%7D%7B2%5Cpi%7D%5Cint_0%5E%7B2%5Cpi%7D%20f%28t%29%5Cmathrm%7Be%7D%5E%7B-jnt%7D%5Cmathrm%7Bd%7Dx)
+
 > where :
 > ![c_n](https://latex.codecogs.com/svg.latex?%5Cinline%20c_n) = coefficient calculated which is in form ![x+iy](https://latex.codecogs.com/svg.latex?%5Cinline%20x&plus;iy) or ![r\mathrm{e}^{-jnt}](https://latex.codecogs.com/svg.latex?%5Cinline%20r%5Cmathrm%7Be%7D%5E%7B-jnt%7D) where r is radius of circle and t gives the position of point in circumference of circle
 > f(t) = returns x, y points at time t. Note that we have created ```time_list```. that was for this.
