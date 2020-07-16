@@ -117,7 +117,7 @@ ylim_data = plt.ylim()
 ```
 
 #### 6. Make a time_list from 0 to ![2PI](https://latex.codecogs.com/svg.latex?%5Cinline%202%5Cpi)
-We are doing this, because we are rotating the circle. To rotate a circle, we need angle. Later we will use this angle to determine $$x+iy = f(t)$$. Later you will use it for calculating fourier coefficients.
+We are doing this, because we are rotating the circle. To rotate a circle, we need angle. Later we will use this angle to determine ![x+iy = f(t)](https://latex.codecogs.com/svg.latex?%5Cinline%20x&plus;iy%20%3D%20f%28t%29). Later you will use it for calculating fourier coefficients.
 ```python
 t_list = np.linspace(0, tau, len(x_list))
 print(t_list)
@@ -127,20 +127,20 @@ Output:
 [0.00000000e+00 1.13414897e-03 2.26829794e-03 ... 6.28091701e+00
  6.28205116e+00 6.28318531e+00]
 ```
-It will go from 0 to ```tau```. Tau is just $$2\pi^c= 360^0$$ 
+It will go from 0 to ```tau```. Tau is just ![2\pi^c= 360^0](https://latex.codecogs.com/svg.latex?%5Cinline%202%5Cpi%5Ec%3D%20360%5E0)
 
 #### 7. Find the fourier coefficients to approximately locate given points
 Fourier Coefficient Formula is:
-> $$c_n=\frac{1}{2\pi}\int_0^{2\pi} f(t)\mathrm{e}^{-jnt}\mathrm{d}x$$
+> ![c_n=\frac{1}{2\pi}\int_0^{2\pi} f(t)\mathrm{e}^{-jnt}\mathrm{d}x](https://latex.codecogs.com/svg.latex?%5Cinline%20c_n%3D%5Cfrac%7B1%7D%7B2%5Cpi%7D%5Cint_0%5E%7B2%5Cpi%7D%20f%28t%29%5Cmathrm%7Be%7D%5E%7B-jnt%7D%5Cmathrm%7Bd%7Dx)
 > where :
-> $$c_n$$ = coefficient calculated which is in form $$x+iy$$ or $$r\mathrm{e}^{-jnt}$$ where $$r$$ is radius of circle and $$t$$ gives the position of point in circumference of circle
+> ![c_n](https://latex.codecogs.com/svg.latex?%5Cinline%20c_n) = coefficient calculated which is in form ![x+iy](https://latex.codecogs.com/svg.latex?%5Cinline%20x&plus;iy) or ![r\mathrm{e}^{-jnt}](https://latex.codecogs.com/svg.latex?%5Cinline%20r%5Cmathrm%7Be%7D%5E%7B-jnt%7D) where r is radius of circle and t gives the position of point in circumference of circle
 > f(t) = returns x, y points at time t. Note that we have created ```time_list```. that was for this.
-> t = time i.e from 0 to $$2\pi$$
+> t = time i.e from 0 to ![2\pi](https://latex.codecogs.com/svg.latex?%5Cinline%202%5Cpi)
 
 Please watch [this video][explained] for better understanding.
-Coefficients will be in sequence like: ...$$c_{-2}, c_{-1}, c_{0}, c_{1}, c_{2}$$...
+Coefficients will be in sequence like: ...![$$c_{-2}, c_{-1}, c_{0}, c_{1}, c_{2}$$](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B-2%7D%2C%20c_%7B-1%7D%2C%20c_%7B0%7D%2C%20c_%7B1%7D%2C%20c_%7B2%7D)...
 More and more coefficients means better result.
-So we will define ```order=100``` for now. which goes from $$c_{-order}$$ to $$c_{order}$$ 
+So we will define ```order=100``` for now. which goes from $$c_{-order}$$ to ![$$c_{order}$$](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7Border%7D)
 ```python
 order = 100
 ```
@@ -192,7 +192,7 @@ result = quad_vec(lambda x: f(x), 0, 3)[0]
 print(result) 
 ```
 The above code does the formula:
-$${result}=\int_0^{3} {(x+1j)}\mathrm{d}x$$
+![{result}=\int_0^{3} {(x+1j)}\mathrm{d}x](https://latex.codecogs.com/svg.latex?%5Cinline%20%7Bresult%7D%3D%5Cint_0%5E%7B3%7D%20%7B%28x&plus;1j%29%7D%5Cmathrm%7Bd%7Dx)
 Try it yourself. You will get almost same output as below.
 output:
 ```sh
@@ -212,29 +212,29 @@ Hurray!!! We are almost done.
 This is the interesting part of this project. We will make about 300 rotating circles to draw the figure we wanted.
 Let me show you how circles and coefficients are related
 For example, we have 3 coefficients.
-$$c_{-1} = -10-10j$$
-$$c_{0} = 2-2j$$
-$$c_{1} = 10+5j$$
+![c_{-1} = -10-10j](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B-1%7D%20%3D%20-10-10j)
+![c_{0} = 2-2j](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B0%7D%20%3D%202-2j)
+![c_{1} = 10+5j](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B1%7D%20%3D%2010&plus;5j)
 When we plot the coefficients in figure, we will get result as follow:
-| $$c_0$$ |
+| ![c_0](https://latex.codecogs.com/svg.latex?%5Cinline%20c_0) |
 |:--:|
 | ![coeff[0]](img_md/c0.png) |
-|  $$radius = \sqrt{2^2+(-2)^2} = {magnitude(c_0)}$$ and $$center= (0,0)$$ |
+|  ![radius = \sqrt{2^2+(-2)^2} = {magnitude(c_0)}](https://latex.codecogs.com/svg.latex?%5Cinline%20radius%20%3D%20%5Csqrt%7B2%5E2&plus;%28-2%29%5E2%7D%20%3D%20%7Bmagnitude%28c_0%29%7D) and ![center= (0,0)](https://latex.codecogs.com/svg.latex?%5Cinline%20center%3D%20%280%2C0%29) |
 
-| adding $$c_1$$ to $$c_0$$ |
+| adding ![c_1](https://latex.codecogs.com/svg.latex?%5Cinline%20c_1) to ![c_0](https://latex.codecogs.com/svg.latex?%5Cinline%20c_0) |
 |:--:|
 | ![coeff[1]](img_md/c1.png) |
-|  $$radius = \sqrt{(10)^2+5^2} = {magnitude(c_1)}$$ and $$center= (0+2,0+(-2))=(2,-2)$$ |
+|  ![radius = \sqrt{(10)^2+5^2} = {magnitude(c_1)}](https://latex.codecogs.com/svg.latex?%5Cinline%20radius%20%3D%20%5Csqrt%7B%2810%29%5E2&plus;5%5E2%7D%20%3D%20%7Bmagnitude%28c_1%29%7D) and ![center= (0+2,0+(-2))=(2,-2)](https://latex.codecogs.com/svg.latex?%5Cinline%20center%3D%20%280&plus;2%2C0&plus;%28-2%29%29%3D%282%2C-2%29) |
 
-| adding $$c_{-1}$$ to $$c_1$$ |
+| adding ![c_{-1}](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B-1%7D) to ![c_1](https://latex.codecogs.com/svg.latex?%5Cinline%20c_1) |
 |:--:|
 | ![coeff[-1]](img_md/c-1.png) |
-|  $$radius = \sqrt{(-10)^2+(-10)^2} = {magnitude(c_{-1}})$$ and $$center=(2+10, -2+5)=(12,3)$$ |
+|  ![radius = \sqrt{(-10)^2+(-10)^2} = {magnitude(c_{-1}})](https://latex.codecogs.com/svg.latex?%5Cinline%20radius%20%3D%20%5Csqrt%7B%28-10%29%5E2&plus;%28-10%29%5E2%7D%20%3D%20%7Bmagnitude%28c_%7B-1%7D%7D%29) and ![center=(2+10, -2+5)=(12,3)](https://latex.codecogs.com/svg.latex?%5Cinline%20center%3D%282&plus;10%2C%20-2&plus;5%29%3D%2812%2C3%29) |
 
 The direction of last circle is used to plot the drawing points.
-In this way, circles are created. But we have to sort the coefficients to get the order like: $$c_{0}, c_{1}, c_{-1}, c_{2}, c_{-2}, ...$$
+In this way, circles are created. But we have to sort the coefficients to get the order like: ![c_{0}, c_{1}, c_{-1}, c_{2}, c_{-2}, ...](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B0%7D%2C%20c_%7B1%7D%2C%20c_%7B-1%7D%2C%20c_%7B2%7D%2C%20c_%7B-2%7D%2C%20...)
 #### 1. Let's make a function to sort the coefficients.
-Our coefficient is arranged as:  $$..., c_{-1}, c_{0}, c_{1}, ...$$
+Our coefficient is arranged as:  ![..., c_{-1}, c_{0}, c_{1}, ...](https://latex.codecogs.com/svg.latex?%5Cinline%20...%2C%20c_%7B-1%7D%2C%20c_%7B0%7D%2C%20c_%7B1%7D%2C%20...)
 ```python
 # Let us assume the coefficients as given in example
 coeffs = np.array([2-2j,10+5j,-10-10j])
@@ -251,12 +251,12 @@ Output:
 ```sh
 [ 10. +5.j -10.-10.j   2. -2.j]
 ```
-Look at the output, we have sorted them in order like: $$c_{0}, c_{1}, c_{-1}$$
+Look at the output, we have sorted them in order like: ![c_{0}, c_{1}, c_{-1}](https://latex.codecogs.com/svg.latex?%5Cinline%20c_%7B0%7D%2C%20c_%7B1%7D%2C%20c_%7B-1%7D)
 
 #### 2. How to make circles and lines in matplotlib
 **Making a circle**
 Formula for ploting the circle is :
-$$x = rcos(\theta)$$, $$y = rsin(\theta)$$
+![x = rcos(\theta)$$, $$y = rsin(\theta)](https://latex.codecogs.com/svg.latex?%5Cinline%20x%20%3D%20rcos%28%5Ctheta%29%24%24%2C%20%24%24y%20%3D%20rsin%28%5Ctheta%29)
 ```python
 fig, ax = plt.subplots()
 ax.set_aspect('equal') # to make the axes symmetric
@@ -272,7 +272,7 @@ Output:
 
 **Making a radius in circle show direction of rotation**
 Let us copy the circle code and make a line here.
-We will draw the line from center of circle and align at $$45^0$$ = tau/8
+We will draw the line from center of circle and align at ![45^0](https://latex.codecogs.com/svg.latex?%5Cinline%2045%5E0) = tau/8
 ```python
 fig, ax = plt.subplots()
 ax.set_aspect('equal') # to make the axes symmetric
@@ -294,7 +294,7 @@ I hope you understand how to make lines and circles in matplotlib. Later we will
 #### 3. Now we will join the circles and lines in the figure
 Note that center point of next circle is the coefficient point of a circle.
 I have already said that coefficients are nothing but information about the radius and radius direction in current circle. To rotate a circle, we can do:
-$$c_n * e^{jnt}$$ where t is from 0 to tau. 
+![c_n * e^{jnt}](https://latex.codecogs.com/svg.latex?%5Cinline%20c_n%20*%20e%5E%7Bjnt%7D) where t is from 0 to tau. 
 when t = tau/2, the circle will rotate about $$90^0$$ anticlockwise.
 
 Now let's make the function.
@@ -379,7 +379,7 @@ How to make animation??
 Remember!!! 
 We need to multiply coefficient with exponential term as discussed already.
 So, let's multiply the coefficients with exponential term before sorting out.
-$$c_n * e^{jnt}$$
+![c_n * e^{jnt}](https://latex.codecogs.com/svg.latex?%5Cinline%20c_n%20*%20e%5E%7Bjnt%7D)
 ```python
 # exponential term to be multiplied with coefficient 
 exp_term = np.array([np.exp(n*t*1j) for n in range(-order, order+1)])
@@ -530,7 +530,7 @@ print("completed: epicycle.mp4")
 
 Hurray!!! We are done.
 
-I am very thankful to [youtube/3Blue1Brown][3Blue1Brown] for its wonderful explanation.
+I am very thankful to [youtube/3Blue1Brown][3Blue1Brown] for their wonderful explanation.
 
    [3Blue1Brown]: <https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw>
    [explained]: <https://www.youtube.com/watch?v=r6sGWTCMz2k>
