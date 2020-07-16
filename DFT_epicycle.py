@@ -106,7 +106,6 @@ pbar = tqdm(total=frames)
 # save the coefficients in order 0, 1, -1, 2, -2, ...
 # it is necessary to make epicycles
 def sort_coeff(coeffs):
-    order = 100
     new_coeffs = []
     new_coeffs.append(coeffs[order])
     for i in range(1, order+1):
